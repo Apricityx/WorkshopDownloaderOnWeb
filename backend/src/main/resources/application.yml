@@ -1,0 +1,18 @@
+server:
+  forward-headers-strategy: framework
+  error:
+    include-message: never
+
+  jackson:
+    default-property-inclusion: non_null
+  servlet:
+    multipart:
+      max-file-size: 0B
+      max-request-size: 0B
+
+  base-url: ${APP_BASE_URL:http://localhost:8080}
+  admin-steam-ids: ${ADMIN_STEAM_IDS:}
+  session-secret: ${SESSION_SECRET:development-only-secret-change-me}
+  upstream-http-proxy: ${UPSTREAM_HTTP_PROXY:}
+  download-root: ${DOWNLOAD_ROOT:./data/downloads}
+  session-hours: ${ADMIN_SESSION_HOURS:12}
